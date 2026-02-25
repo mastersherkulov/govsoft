@@ -7,3 +7,5 @@ class OrganizationsViewSet(viewsets.ModelViewSet):
     serializer_class = OrganizationsSerializers
     allowed_methods = ['GET', 'PUT', 'POST', 'DELETE']
     http_method_names = ['get', 'put', 'post', 'delete']
+    filterset_fields = ['org_code', 'org_name', 'is_active']
+    

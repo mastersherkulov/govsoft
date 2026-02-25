@@ -24,6 +24,7 @@ THIRD_PART_APPS = [
     'debug_toolbar',  # https://django-debug-toolbar.readthedocs.io/
     'corsheaders',  # https://pypi.org/project/django-cors-headers/
     'drf_yasg',  # https://drf-yasg.readthedocs.io/en/stable/readme.html
+    'django_filters',
     'rest_framework',
     'rest_framework_simplejwt',
 ]
@@ -103,3 +104,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join("/home/project/media")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}
